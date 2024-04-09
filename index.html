@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Literalmentetodo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilos/css.css">
+</head>
+
+<body>
+    <div class="cajaG">
+        <div class="cajaNav">
+            <nav>
+                <button class="btnNav">Curriculum</button>
+                <button class="btnNav">Proyectos</button>
+                <button class="btnNav">Información</button>
+            </nav>
+        </div>
+        <div class="cajas">
+            <div class="caja der">
+                <div class="cajaImgPerfil">
+                    <img class="imgPerfil" src="img/logoA.png" alt="">
+                </div>
+            </div>
+            <div class="caja izq">
+                <label class="titulo">David García Torres</label>
+                <label>Apasionado de la informática, con experiencia enfocada en programación durante mis estudios y
+                    practicas en empresas,
+                    me adapto a cualquier trabajo. Motivado para iniciar mi carrera profesional y seguir
+                    aprendiendo</label>
+            </div>
+            <div class="caja der">
+                <label class="titulo2">Experiencia
+                    laboral (Practicas)</label>
+            </div>
+            <div class="caja izq">
+                <label class="pos1">Tecnico informatico</label>
+                <label class="pos2">Tauten Seguros | Febrero 2023 - Abril 2023</label>
+                <label class="pos3"><ol>
+                    <li>Creación de un plan de marketing en redes sociales.</li>
+                    <li>Definición de estrategias a seguir.</li>
+                    <li>Control y mantenimiento de los equipos informáticos.</li>
+                    <li>Creación de nuevos apartados y mantenimiento web.</li>
+                </ol></label>
+            </div>
+            <div class="caja der">
+                <label>hola</label>
+            </div>
+            <div class="caja izq">
+                <label>hola</label>
+            </div>
+            <div class="caja der">
+                <label>hola</label>
+            </div>
+            <div class="caja izq">
+                <label>hola</label>
+            </div>
+            <div class="caja der">
+                <label>hola</label>
+            </div>
+            <div class="caja izq">
+                <label>hola</label>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cajas = document.querySelectorAll(".caja");
+            const scrollOffset = -50; // Ajusta el número de píxeles antes de que se active el cambio
+
+            function checkVisibility() {
+                cajas.forEach((caja, index) => {
+                    const rect = caja.getBoundingClientRect();
+                    const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight - scrollOffset;
+                    if (isVisible) {
+                        caja.classList.add("visible");
+                    } else {
+                        caja.classList.remove("visible");
+                    }
+                });
+            }
+
+            checkVisibility();
+
+            window.addEventListener("scroll", checkVisibility);
+        });
+
+
+    </script>
+</body>
+
+</html>
